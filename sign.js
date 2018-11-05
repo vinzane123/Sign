@@ -22,6 +22,7 @@ bb = new ByteBuffer(1, true);
 bb.writeString(data.name);
 bb.writeInt(data.eid);
 bb.writeInt(data.age);
+
 bb.flip();
 bytes = bb.toBuffer();
 return bytes;
@@ -106,25 +107,25 @@ let vb = verify(bytes,publicKey,s)
 
 //  function Verify(data,sender,cb){
   
-//    // Check sender
-//   if (!sender) {
-//     return setImmediate(cb, "Invalid sender");
-//   }
+  //  // Check sender
+  // if (!sender) {
+  //   return setImmediate(cb, "Invalid sender");
+  // }
 
-//    try {
-//     var valid = false;
+  //  try {
+  //   var valid = false;
 
-//     if (PublicKey) {
-//       valid = this.verifySignature(data, PublicKey, data.signature);
-//     }
-//   } catch (e) {
-//     return setImmediate(cb, e.toString());
-//   }
+  //   if (PublicKey) {
+  //     valid = this.verifySignature(data, PublicKey, data.signature);
+  //   }
+  // } catch (e) {
+  //   return setImmediate(cb, e.toString());
+  // }
 
-//   if (!valid) {
-//     return setImmediate(cb, "Failed to verify signature");
+  // if (!valid) {
+  //   return setImmediate(cb, "Failed to verify signature");
    
-//   }
+  // }
 
   // function verifySignature(data, publicKey, signature) {
   //     var bytes = getBytes(data, true, true);
